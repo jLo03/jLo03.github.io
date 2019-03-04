@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>JSON Stage 2</title>
+</head>
+<body>
+
+<script>
+    var myData = "";
+    var staticUrl = 'https://raw.githubusercontent.com/PMiskew/pmiskew.github.io/master/Activity%202/data/HIVinfection.json'; 
+
+    $.getJSON(staticUrl, function(data) {
+        country1Data = data.fact[1].Value; //Get value from JSON A
+        loc1 = country1Data.indexOf("["); //Locate the [ bracket B
+        val1 = country1Data.substring(0,loc1); // All values have [ C
+        val1 = val1.replace(/ /g,""); //replace all " " with "" D
+        val1 = parseInt(val1); //convert val1 to into int E
+        console.log(val1)
+
+        country1Data = data.fact[2].Value; //Get value from JSON A
+        loc1 = country1Data.indexOf("["); //Locate the [ bracket B
+        val1 = country1Data.substring(0,loc1); // All values have [ C
+        val1 = val1.replace(/ /g,""); //replace all " " with "" D
+        val1 = parseInt(val1); //convert val1 to into int E
+        console.log(val1)
+
+        country1Data = data.fact[4].Value; //Get value from JSON A
+        loc1 = country1Data.indexOf("["); //Locate the [ bracket B
+        val1 = country1Data.substring(0,loc1); // All values have [ C
+        val1 = val1.replace(/ /g,""); //replace all " " with "" D
+        val1 = parseInt(val1); //convert val1 to into int E
+        console.log(val1)
+    });
+
+</script>
+
+</body>
+</html>
