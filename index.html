@@ -1,191 +1,152 @@
-<!DOCTYPE HTML>
-<html lang = "en">
-  <head>
-    <title>basicTable.html</title>
-    <meta charset = "UTF-8" />
-    <style>
-    
-    table, td, th {
-      border: 1px solid black;
-      padding: 10px;
-    } 
-    .center {
-    
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      width: 100%;
-    }
-    input {
-      text-align: center;
-      background-color: lightgrey;
-      border-radius: 10px;
-    }
-    </style>
-  </head>
-  <body>
-    <h1>Work Record</h1>
-    <p>This site should not have any adornment</p>
-    <a href="#activity1">activity1: Basics</a>
-    <a href="#activity2">activity2: JSON </a>
-    <a href="#activity3">activity3: Machien Learning</a>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Animated Sticky Bar</title>
+	<link rel="stylesheet" type ="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(window).on('scroll',function(){
+			if($(window).scrollTop()){
+				$('nav').addClass('black')
+			}
+			else
+			{
+				$('nav').removeClass('black')
+			}
+		})
+		$(document).ready(function(){
+			$(".menu h4").click(function(){
+				$("nav ul").toggleClass("active")
+			})
+		})
+	</script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Bugs', 'amount'],
+          ['Beetles', 659],
+          ['Caterpillars', 362],
+          ['Ants, Bees and Wasps', 321],
+          ['Grasshopper and Locust', 278],
+          ['True Bugs', 61],
+          ['Dragonfly', 61]        ]);
+
+        var options = {
+          title: 'Number of edible insects species per group in the world',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
 
 
+</head>
+<body>
+	<div class = "responsive-bar">
+		<div class="logo">
+			<img src="foodbugs.jpg">
+		</div>
+		<div class = "menu">
+			<h4>Menu</h4>
+		</div>
+	</div>
+	<nav id = "navbar">
+		<div class="logo">
+			<img src="foodbugs.jpg">
+		</div>
+		<ul>
+			<li><a href="#" class="active nav-link">Home</a><li> 
+			<li><a href="corporation.html" class="nav-link">Corporations</a><li>
+			<li><a href="#" class="nav-link">Team (PH)</a><li>
+			<li><a href="#" class="nav-link">Contacts (PH)</a><li>
+		</ul>
+	</nav>
 
-    <a name="activity2"></a>
-    <h2>Activity 1: UN Sustainability Goals Site</h2>
-   
-    <table>
-      <tr>
-        <th>Stage</th>
-        <th>Link</th>
-        <th>Short Description</th>
-      </tr>
-      <tr>
-        <td>Stage 1</td>
-        <td>
-      <form action="Activity 1/ungoalstep1.html">
-          <input class = "center" type="submit" value="Stage 1 Site" />
-      </form>
+	<section class = "opener"></section>
+	<section class = "content">
+		<h1>Why Bugs?</h1>
+
+		<p>We should all eat bugs. Eating insects can have a positive effect on your life in a variety of ways. There is the personal experience, the global experience and the environmental impact that eating insects can have. <p>
+
+		<ul style="list-style-type:square;">
+  		<li>Adding insects to our diets will bring out new tastes and textures with a whole new palate experience.</li>
+
+  		<li>Insects are nutritious and packed with protein that has all of the essential amino acids. They are high in iron, calcium and B12. They are a great source of Omega 3 and are prebiotics (nutrition for probiotics).</li>
+
+  		<li>edible insects bullet  Meat production is a major cause of global warming and is unsustainable. Adding insects to diets worldwide will reduce the need for meat and therefore help fight global warming. </li>
+
+		<p>Eating Bugs is Good for Us and Good for the Planet!</p>
+
+	</section>
+	<section class = "flipbox"></section>
+		<div class="flex-container">
+			<div class="flip-box">
+				<div class="flip-box-inner">
+			    	<div class="flip-box-front">
+			    		<img src="grass.jpg" alt="Avatar" style="width:300px; height:300px;"/>
+			    	</div>
+			    	<div class="flip-box-back">
+			      		<h3>Grasshopper</h3>
+			      		<p>Nicknamed "chapulines", they are a popular delicacy in Mexico. Tastes like shrimp! Contains 30g of protein and 3.8g of fat per Grasshopper</p>
+			    	</div>
+				</div>
+			</div>
+
+			<div class="flip-box">
+			  	<div class="flip-box-inner">
+			    	<div class="flip-box-front">
+			     		<img src="cricket.jpg" alt="Avatar" style="width:300px; height:300px;"/>
+			    	</div>
+			    	<div class="flip-box-back">
+			      		<h3>Cricket</h3>
+			      		<p>Served on a skewer, it was reported that Goshute Indians named shrimps "sea cricket" when encountering them! Has 9.6g of protein and 5.6g of fat per Cricket.</p>
+			    	</div>
+			  	</div>
+			</div>
+
+			<div class="flip-box">
+			  	<div class="flip-box-inner">
+			    	<div class="flip-box-front">
+			     		<img src="wasp.jpeg" alt="Avatar" style="width:300px; height:300px;"/>
+			    	</div>
+			    	<div class="flip-box-back">
+			      		<h3>Wasp Larve</h3>
+			      		<p>A popular delicacy in Japan, so much that it needs to be imported from other countries to meet demand. Contains 17g of protein and 3.6g of fat.</p>
+			    	</div>
+			  	</div>
+			</div>
+
+			<div class="flip-box">
+				<div class="flip-box-inner">
+			    	<div class="flip-box-front">
+			    		<img src="grub.jpg" alt="Avatar" style="width:300px; height:300px;"/>
+			    	</div>
+			    	<div class="flip-box-back">
+			      		<h3>Witchetty grub</h3>
+			      		<p>Otherwise known as "Hoo Hoo grub", it is traditionally eaten by Aboriginals. Tastes like chicken when cooked! Contains 16g of protein and 29g of fat per grub.</p>
+			    	</div>
+				</div>
+			</div>
+		</div>
+
+	<section>
+		<div id="donutchart" style="width: 100%; height: 600px;"></div>
+	</section>
+
+	<section class = "content1">
+		<button class="btn success">    Donate    </button>
+		<button class="btn info">    Facebook    </button>
+		<button class="btn warning">    Instagram    </button>
+		<button class="btn danger">    Youtube    </button>
+		<button class="btn default">    Twitter    </button>
+	</section>
 
 
-        <td>In this stage we configured the photo resources and created the file structure and template. This taught me how to access different files and how to use different files to create an website, which is really helps my website as it allows me to put images into my websites, making my website look a lot prettier.</td>
-      </tr>
-      <tr>
-        <td>Stage 2</td>
-        <td>
-          
-      <form action="Activity 1/ungoalstep2.html">
-          <input class = "center" type="submit" value="Stage 2 Site" />
-      </form>
-
-        </td>
-        <td>This taught me how to create an flip box, as well as how to use photoes saved on other files. This really helps my website as building a flip box taught me how to use classes and what does classes do, which is a really crucial part to web development. /td>
-      </tr>
-     
-      <tr>
-        <td>Stage 3</td>
-        <td>
-          
-      <form action="Activity 1/ungoalstep3.html">
-          <input class = "center" type="submit" value="Stage 3 Site" />
-      </form>
-
-        </td>
-        <td>This taught me how to use css, what is the .hover command, and how to create/place multiple flip boxes. This helps my website as css is the most important part of making a beautiful website, and .hover command/status is an really important command/status you need to know when writing user interactive code. </td>
-      </tr>
-
-      <tr>
-        <td>Stage 4</td>
-        <td>
-          
-      <form action="Activity 1/ungoalstep4.html">
-          <input class = "center" type="submit" value="Stage 4 Site" />
-      </form>
-
-        </td>
-        <td>This taught me what is an flex container, and how to use one to suit my needs. It also taught me how to create an home button, a button that takes me back to the main page. This is important to my website as the home button allows my user to navigate the website, and the flex container teaches some more advanced ideas about classes (especially how to use multiple classes), which would help shortening my code.</td>
-      </tr>
-
-      <tr>
-        <td>Stage 5</td>
-        <td>
-          
-      <form action="Activity 1/ungoalstep5.html">
-          <input class = "center" type="submit" value="Stage 5 Site" />
-      </form>
-
-        </td>
-        <td>This taught me how to space out my flip boxes using css. </td>
-      </tr>
-
-      <tr>
-        <td>Stage 6</td>
-        <td>
-          
-      <form action="Activity 1/ungoalstep6.html">
-          <input class = "center" type="submit" value="Stage 6 Site" />
-      </form>
-
-        </td>
-        <td>This taught me how to place an image, as well as how to control the image size using css. This is extremely crucial to my website, as it allows me put high quality pictures in website, making it more interesting as well as more beautiful.</td>
-      </tr>
-
-      <tr>
-        <td>Stage 7</td>
-        <td>
-          
-      <form action="Activity 1/ungoalstep7.html">
-          <input class = "center" type="submit" value="Stage 7 Site" />
-      </form>
-
-        </td>
-        <td>This taught me what is responsive programming, and how to create an basic program (using javascript) for responsive programming. This is extremely important as responsive programming allows my website to function any device in many different shapes and forms. </td>
-      </tr>
-     
-    </table>
-
-    <a name="activity2"></a>
-    <h2>Activity 2: JSON Data - HIV Infeaction Rate By Country</h2>
-
-        <table>
-      <tr>
-        <th>Stage</th>
-        <th>Link</th>
-        <th>Short Description</th>
-      </tr>
-      <tr>
-        <td>Stage 1</td>
-        <td>
-      <form action="Activity 2/stage1JSON.html">
-          <input class = "center" type="submit" value="Stage 1 Site" />
-      </form>
-
-        <td>In this stage we will be checking to ensure that the site is properly loading JQUERY. This is extremely important as JQUERY allows me to use Javascript in an easier and more efficient way. </td>
-
-      </tr>
-      <tr>
-        <td>Stage 2</td>
-        <td>
-          
-      <form action="Activity 2/stage2JSON.html">
-          <input class = "center" type="submit" value="Stage 2 Site" />
-      </form>
-
-        </td>
-        <td>In this stage, I learnt how to Access a JSON file on github (any) and storing it on my website for future use. THis is really important as it allows me to get any data stored in a json file, and use it in Activity 2 stage 3.  </td>
-      </tr>
-     
-      <tr>
-        <td>Stage 3</td>
-        <td>
-          
-      <form action="Activity 2/stage3JSON.html">
-          <input class = "center" type="submit" value="Stage 3 Site" />
-      </form>
-
-        </td>
-        <td>In this stage, I learnt how to manipulate the data from the JSON files. This is really important to my website as it allows make anything related to data (graphs, tables) on any subject I want (that has data stored in a JSON file), making the website more knowlegable and interesting. </td>
-      </tr>
-
-      <tr>
-        <td>Stage 4</td>
-        <td>
-          
-      <form action="Activity 2/stage4aJSON.html">
-          <input class = "center" type="submit" value="Stage 4 Site" />
-      </form>
-    
-      <form action="Activity 2/stage4bJSON.html">
-          <input class = "center" type="submit" value="Stage 4 Site" />
-      </form>
-
-        </td>
-        <td>In this activity I learnt string manipulation and maths. This is really important to my code as it allows me to write more efficient and shorter code. It also allows me to do things that I thought couldn't be done.</td>
-      </tr>
-
-          
-    </table>
-  </body>
+</body>
 </html>

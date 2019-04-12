@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Animated Sticky Bar</title>
+	<link rel="stylesheet" type ="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(window).on('scroll',function(){
+			if($(window).scrollTop()){
+				$('nav').addClass('black')
+			}
+			else
+			{
+				$('nav').removeClass('black')
+			}
+		})
+		$(document).ready(function(){
+			$(".menu h4").click(function(){
+				$("nav ul").toggleClass("active")
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div class = "responsive-bar">
+		<div class="logo">
+			<img src="foodbugs.jpg">
+		</div>
+		<div class = "menu">
+			<h4>Menu</h4>
+		</div>
+	</div>
+	<nav>
+		<div class="logo">
+			<img src="foodbugs.jpg">
+		</div>
+		<ul class = "active">
+			<li><a href="index.html" class="nav-link">Home</a><li> 
+			<li><a href="#" class="active nav-link">Corporations</a><li>
+			<li><a href="#" class="nav-link">Team (PH)</a><li>
+			<li><a href="#" class="nav-link">Contacts (PH)</a><li>
+		</ul>
+	</nav>
+
+	<section class = "opener2"></section>
+	<section class = "content">
+		<h1>Why are bugs the future?</h1>
+
+		<p>Edible insects are just one form of alternative proteins that food manufacturers are quietly pursuing. A growing population, a rapidly improving diet for western food in developing countries, and a changing climate are all weighing in on our ability to feed everyone on the planet.
+		</p>
+
+		<p>
+		Edible bugs such as crickets provide a food supply that is rich in nutrients and, pound for pound, will use less feed, land, and water than any type of traditional livestock.
+		</p>
+
+		<p> The market for bugs is only incresaing. Here is a graph of predicted growth for the market for bugs. </p>
+
+	</section>
+	<section class = "graph"></section>
+
+	<section class = "content1">
+		<button class="btn success">    Donate    </button>
+		<button class="btn info">    Facebook    </button>
+		<button class="btn warning">    Instagram    </button>
+		<button class="btn danger">    Youtube    </button>
+		<button class="btn default">    Twitter    </button>
+	</section>
+
+</body>
+</html>
